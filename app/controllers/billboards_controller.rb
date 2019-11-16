@@ -38,6 +38,9 @@ class BillboardsController < ApplicationController
 		redirect_to billboards_path
 	end
 
+	def populate
+		@billboard.populate
+	end
 	private
 		def set_billboard
 			@billboard = Billboard.find(params[:id])

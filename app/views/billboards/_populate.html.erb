@@ -1,0 +1,4 @@
+<% if @billboard.songs.count == 0 %>
+	<h2 class="header">Empty Billboard</h2>
+	<%= button_to "Populate", [:populate,@billboard], method: :get, class: "ui button red"%>
+<%end%>
