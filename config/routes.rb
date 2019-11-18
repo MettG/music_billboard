@@ -6,9 +6,8 @@ Rails.application.routes.draw do
 	end
 
 	# get 'billboards/populate/:id' => 'billboards#populate'
-
 	resources :artists do
 		resources :songs
 	end
-	
 end
+

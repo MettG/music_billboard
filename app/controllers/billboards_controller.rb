@@ -34,12 +34,14 @@ class BillboardsController < ApplicationController
 	end
 
   def destroy
+		@billboard.songs.destroy_all
 		@billboard.destroy
 		redirect_to billboards_path
 	end
 
 	def populate
 		@billboard.populate
+		redirect_to @billboard
 	end
 	private
 		def set_billboard

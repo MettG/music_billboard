@@ -1,4 +1,4 @@
-class SongController < ApplicationController
+class SongsController < ApplicationController
 	before_action :set_song, except: [:index,:new, :create]
 	before_action :set_artist
 	def index

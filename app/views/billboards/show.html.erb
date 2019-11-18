@@ -1,4 +1,7 @@
 <h1 class="header"><%=@billboard.name%></h1>
+<hr/>
+<%= link_to 'Delete', @billboard, method: :delete, class: "ui button negative" %>
+<br/>
 <%= render 'populate', billboard: @billboard %>
 <%@billboard.songs.each do |song|%>
 	<%= render 'songs/song', { song: song } %>

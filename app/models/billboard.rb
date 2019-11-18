@@ -23,8 +23,10 @@ class Billboard < ApplicationRecord
 			end
 			song = songs_without[rand(songs_without.length)]
 			song.billboard_id = self.id
+			song.save
 			songs_without -= [song]
 		end
 		self.name+=" #{@number}"
+		self.save
 	end
 end
